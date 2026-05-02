@@ -12,34 +12,43 @@ import Footer from './components/landing/Footer';
 
 function App() {
   return (
-    // O <main> engloba toda a infraestrutura, garantindo a tipografia
-    // e a cor de seleção premium (texto branco com fundo indigo)
+    /* 
+      Container Principal: 
+      Mantemos o bg-slate-50 para suavidade e a seleção premium.
+      O overflow-x-hidden evita quebras horizontais em animações de entrada.
+    */
     <main className="font-sans text-slate-900 bg-slate-50 selection:bg-indigo-600 selection:text-white overflow-x-hidden">
       
-      {/* NavBar Fixa - O funil permanente que acompanha o scroll */}
+      {/* Funil Permanente: NavBar sempre visível para ação imediata */}
       <NavBar />
       
-      {/* 1. O Choque de Realidade */}
+      {/* ETAPA 1: O Gancho (Abertura com Alívio) */}
       <Hero />
       
-      {/* 2. O Diagnóstico Clínico (Agitação da Dor) */}
+      {/* ETAPA 2: A Identificação (Empatia com a desorganização real) */}
       <AgitacaoDor />
       
-      {/* 3. A Infraestrutura AAA (Novos Componentes de Governança e Poder) */}
-      <EngineCustomization />
-      <LeadDossier />
-      <GovernanceSecurity />
+      {/* ETAPA 3: A Prova de Poder (Flexibilidade e Segurança dos Dados) */}
+      <div id="solucao">
+        <EngineCustomization />
+        <LeadDossier />
+        <GovernanceSecurity />
+      </div>
       
-      {/* 4. Escala e Eficiência Cirúrgica (Automações) */}
-      <Features />
+      {/* ETAPA 4: A Escala (Ocupando o tempo com o que importa) */}
+      <section id="funcionalidades">
+        <Features />
+      </section>
       
-      {/* 5. A Aquisição do Ativo (Monetização) */}
-      <Pricing />
+      {/* ETAPA 5: O Valor (Investimento Inteligente) */}
+      <section id="precos">
+        <Pricing />
+      </section>
       
-      {/* 6. Quebra de Objeções e Fechamento */}
+      {/* ETAPA 6: Quebra de Objeções & Terminal de Entrada */}
       <FaqCTA />
       
-      {/* Footer de Autoridade */}
+      {/* Fechamento de Autoridade */}
       <Footer />
       
     </main>
