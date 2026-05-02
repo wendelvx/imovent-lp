@@ -21,12 +21,12 @@ export default function Features() {
   return (
     <section className="bg-white py-32 px-6 lg:px-12 relative overflow-hidden border-b border-slate-200">
       
-      {/* Título de Comando */}
+      {/* Título de Comando (Mais leve e convidativo) */}
       <div className="max-w-6xl mx-auto mb-32 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <h2 className="text-[11px] font-[800] text-indigo-700 uppercase tracking-[0.3em] mb-4">A Cura para a Operação Amadora</h2>
+          <h2 className="text-[11px] font-[800] text-indigo-700 uppercase tracking-[0.3em] mb-4">Ferramentas que trabalham por você</h2>
           <h3 className="text-4xl md:text-5xl font-extrabold text-slate-950 tracking-tighter">
-            A infraestrutura que <span className="text-indigo-600">estanca as perdas</span> e alavanca o lucro.
+            A infraestrutura que <span className="text-indigo-600">organiza a casa</span> e acelera as vendas.
           </h3>
         </motion.div>
       </div>
@@ -38,17 +38,17 @@ export default function Features() {
           <motion.div variants={fadeInUp} className="order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-50 border-2 border-indigo-200 shadow-[2px_2px_0px_0px_rgba(79,70,229,0.2)] mb-6">
               <LayoutDashboard className="w-4 h-4 text-indigo-700" />
-              <span className="text-[10px] font-black text-indigo-900 tracking-widest uppercase">Gestão Anti-Caos</span>
+              <span className="text-[10px] font-black text-indigo-900 tracking-widest uppercase">Gestão Simplificada</span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-950 mb-6 tracking-tighter leading-[1.1]">
-              Não é apenas um chat. É o controle absoluto da sua comissão.
+              Pare de perder vendas no meio das conversas do WhatsApp.
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
-              O WhatsApp manual é um cemitério de leads. O Imovent injeta uma camada de <strong>Governança</strong> diretamente nas suas conversas. Salve contatos e mova leads no funil sem nunca fechar a aba do WhatsApp Web.
+              Usar só o WhatsApp é pedir para esquecer de responder alguém. O Imovent transforma suas conversas em um funil organizado. Salve o contato, anotações e agende o próximo passo sem nunca sair da tela do chat.
             </p>
             <ul className="space-y-4">
-              {['Histórico completo blindado na nuvem.', 'Lembretes ativos (Zero esquecimento).', 'Qualificação cirúrgica em tempo real.'].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-slate-900 font-[800] text-sm tracking-wide">
+              {['Histórico salvo para sempre (mesmo se perder o celular).', 'Lembretes automáticos para não esquecer de ninguém.', 'Mova o cliente de etapa com um clique.'].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-slate-900 font-bold text-sm tracking-wide">
                   <CheckSquare className="w-5 h-5 text-indigo-600 flex-shrink-0" /> {item}
                 </li>
               ))}
@@ -70,10 +70,10 @@ export default function Features() {
               <div className="space-y-4">
                 <motion.div variants={popIn} className="h-10 w-full bg-slate-100 border border-slate-200"></motion.div>
                 <motion.div variants={popIn} className="h-16 w-full bg-indigo-600 border-2 border-indigo-900 shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] relative flex items-center justify-center">
-                   <span className="text-white font-black text-[10px] uppercase tracking-widest">Sincronizar Lead</span>
+                   <span className="text-white font-black text-[10px] uppercase tracking-widest">Salvar no Imovent</span>
                 </motion.div>
                 <motion.div variants={popIn} className="absolute -right-6 bottom-10 bg-white border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] p-3 w-48">
-                   <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest block mb-2">Ação do Motor</span>
+                   <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest block mb-2">Lead Organizado</span>
                    <div className="h-2 w-full bg-indigo-500"></div>
                 </motion.div>
               </div>
@@ -87,22 +87,22 @@ export default function Features() {
           <motion.div variants={fadeInUp} className="lg:order-2">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border-2 border-emerald-200 shadow-[2px_2px_0px_0px_rgba(16,185,129,0.2)] mb-6">
               <Globe className="w-4 h-4 text-emerald-700" />
-              <span className="text-[10px] font-black text-emerald-900 tracking-widest uppercase">Presença & Autoridade</span>
+              <span className="text-[10px] font-black text-emerald-900 tracking-widest uppercase">Site Próprio</span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-950 mb-6 tracking-tighter leading-[1.1]">
-              Pare de alugar terreno. Seja dono da sua vitrine no Google.
+              Sua imobiliária na primeira página do Google.
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
-              Ser refém dos portais é pagar para não ter marca. O Imovent entrega uma <strong>Infraestrutura Web AAA</strong>, com SEO otimizado para transformar buscas locais em leads diretos e exclusivos para a sua operação.
+              Pagar portais é ótimo, mas quem fica com a marca e os dados do cliente são eles. Tenha um site profissional, rápido e otimizado para o Google. Quando o cliente buscar por um imóvel na sua região, ele encontra você direto.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="p-4 bg-slate-50 border-2 border-slate-200 flex items-center gap-3">
                 <Search className="w-5 h-5 text-indigo-600" />
-                <span className="text-xs font-[800] text-slate-900 uppercase tracking-wide">SEO Ativo</span>
+                <span className="text-xs font-[800] text-slate-900 uppercase tracking-wide">Visibilidade Local</span>
               </div>
               <div className="p-4 bg-slate-50 border-2 border-slate-200 flex items-center gap-3">
                 <Database className="w-5 h-5 text-indigo-600" />
-                <span className="text-xs font-[800] text-slate-900 uppercase tracking-wide">Dados 100% Seus</span>
+                <span className="text-xs font-[800] text-slate-900 uppercase tracking-wide">Leads Exclusivos</span>
               </div>
             </div>
           </motion.div>
@@ -127,28 +127,28 @@ export default function Features() {
                   </div>
                </motion.div>
                <div className="flex gap-4">
-                  <motion.div variants={popIn} className="h-10 flex-1 bg-indigo-900/30 border border-indigo-500/50 flex items-center justify-center font-black text-indigo-400 text-[9px] uppercase tracking-widest">Responsivo</motion.div>
-                  <motion.div variants={popIn} className="h-10 flex-1 bg-emerald-900/30 border border-emerald-500/50 flex items-center justify-center font-black text-emerald-400 text-[9px] uppercase tracking-widest">Indexado</motion.div>
+                  <motion.div variants={popIn} className="h-10 flex-1 bg-indigo-900/30 border border-indigo-500/50 flex items-center justify-center font-black text-indigo-400 text-[9px] uppercase tracking-widest">Funciona no Celular</motion.div>
+                  <motion.div variants={popIn} className="h-10 flex-1 bg-emerald-900/30 border border-emerald-500/50 flex items-center justify-center font-black text-emerald-400 text-[9px] uppercase tracking-widest">Aparece no Google</motion.div>
                </div>
             </motion.div>
           </motion.div>
         </motion.div>
 
-        {/* Feature 3: Automações Operacionais (Eficiência Cirúrgica) */}
+        {/* Feature 3: Automações Operacionais */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <motion.div variants={fadeInUp}>
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-rose-50 border-2 border-rose-200 shadow-[2px_2px_0px_0px_rgba(225,29,72,0.2)] mb-6">
               <Zap className="w-4 h-4 text-rose-600" />
-              <span className="text-[10px] font-black text-rose-900 tracking-widest uppercase">Eficiência Cirúrgica</span>
+              <span className="text-[10px] font-black text-rose-900 tracking-widest uppercase">Trabalho no Automático</span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-950 mb-6 tracking-tighter leading-[1.1]">
-              Membros invisíveis da equipe operando por você.
+              Deixe o trabalho braçal e chato com a gente.
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
-              Trabalho braçal não vende imóvel. O Imovent possui extensões autônomas que ganham o seu tempo real: poste no <strong>Marketplace em massa com 1 clique</strong> e gere artes de luxo para o Instagram no <strong>Studio Integrado</strong> — sem nunca abrir o Canva.
+              Seu tempo deve ser gasto fechando negócios, não fazendo tarefas repetitivas. Use nosso sistema para anunciar no <strong>Facebook Marketplace com um clique</strong> e crie artes prontas para o Instagram direto na plataforma — sem complicação.
             </p>
             <button className="flex items-center gap-3 text-indigo-700 font-[800] uppercase tracking-wide text-sm group hover:text-indigo-900 transition-colors">
-              Ativar Robôs Operacionais <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              Descobrir as Automações <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </button>
           </motion.div>
           
@@ -164,7 +164,7 @@ export default function Features() {
                      <h4 className="text-sm font-black text-slate-900 uppercase tracking-wide mb-1">Facebook Marketplace</h4>
                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest flex items-center gap-2">
                         <span className="w-2 h-2 bg-emerald-500 inline-block"></span>
-                        Postagem em Lote 1-Click
+                        Postagem Rápida em Massa
                      </p>
                   </div>
                </motion.div>
@@ -175,17 +175,17 @@ export default function Features() {
                      <ImageIcon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                     <h4 className="text-sm font-black text-slate-900 uppercase tracking-wide mb-1">Studio Criativo</h4>
+                     <h4 className="text-sm font-black text-slate-900 uppercase tracking-wide mb-1">Criação de Artes</h4>
                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest flex items-center gap-2">
                         <span className="w-2 h-2 bg-indigo-500 inline-block"></span>
-                        Gerador de Artes Automático
+                        Templates Prontos para Uso
                      </p>
                   </div>
                </motion.div>
 
                {/* Watermark/Stamp */}
                <div className="absolute -bottom-6 -right-6 bg-slate-900 text-white border-2 border-slate-800 p-3 shadow-solid-dark rotate-[-5deg]">
-                 <span className="text-[10px] font-black uppercase tracking-widest text-emerald-400 block text-center">Engine<br/>Active</span>
+                 <span className="text-[10px] font-black uppercase tracking-widest text-emerald-400 block text-center">Tempo<br/>Livre</span>
                </div>
             </div>
           </motion.div>
