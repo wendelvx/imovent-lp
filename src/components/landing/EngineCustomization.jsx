@@ -17,7 +17,7 @@ export default function EngineCustomization() {
     <section className="bg-white py-32 px-6 lg:px-12 border-b border-slate-200 overflow-hidden">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-center lg:flex-row-reverse">
         
-        {/* Coluna da Esquerda: Narrativa de Poder & Flexibilidade */}
+        {/* Coluna da Esquerda: Narrativa de Flexibilidade e Alívio */}
         <motion.div 
           initial="hidden" 
           whileInView="visible" 
@@ -27,22 +27,22 @@ export default function EngineCustomization() {
         >
           <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 border-2 border-indigo-200 rounded-none mb-8 shadow-[2px_2px_0px_0px_rgba(79,70,229,0.2)]">
             <Settings2 className="w-4 h-4 text-indigo-700" />
-            <span className="text-[11px] font-[800] text-indigo-900 tracking-widest uppercase">Motor Adaptável</span>
+            <span className="text-[11px] font-[800] text-indigo-900 tracking-widest uppercase">100% Flexível</span>
           </motion.div>
 
           <motion.h2 variants={fadeInUp} className="text-4xl lg:text-5xl font-extrabold text-slate-950 leading-[1.1] tracking-tighter mb-6">
-            O software se dobra à sua estratégia. <span className="text-indigo-600">Não o contrário.</span>
+            Seu processo de vendas é único. <span className="text-indigo-600">Seu sistema também deve ser.</span>
           </motion.h2>
 
           <motion.p variants={fadeInUp} className="text-lg text-slate-600 mb-8 font-medium leading-relaxed">
-            Sistemas engessados matam processos únicos. O Imovent possui uma arquitetura mutável. Crie funis infinitos e defina as etapas exatas da sua operação, seja para <strong>Venda, Locação, Captação ou Lançamentos</strong>.
+            Esqueça as ferramentas engessadas que te obrigam a trabalhar do jeito delas. No Imovent, você desenha o caminho perfeito para o seu cliente. Seja para <strong>Venda, Locação, Captação ou Lançamentos</strong>: crie as etapas que fazem sentido para o seu dia a dia.
           </motion.p>
 
           <motion.div variants={staggerContainer} className="grid grid-cols-2 gap-4 w-full">
             {[
-              { title: "Funis Infinitos", icon: GitBranch },
-              { title: "Etapas Mutáveis", icon: Layers },
-              { title: "Origens Customizadas", icon: Settings2 },
+              { title: "Quantos funis precisar", icon: GitBranch },
+              { title: "Etapas do seu jeito", icon: Layers },
+              { title: "Rastreie cada cliente", icon: Settings2 },
               { title: "Múltiplas Operações", icon: CheckSquare }
             ].map((item, i) => (
               <motion.div variants={fadeInUp} key={i} className="flex items-center gap-3 p-4 bg-slate-50 border-2 border-slate-200 shadow-[2px_2px_0px_0px_rgba(15,23,42,0.05)]">
@@ -53,7 +53,7 @@ export default function EngineCustomization() {
           </motion.div>
         </motion.div>
 
-        {/* Coluna da Direita: Interface do Construtor de Funil (AAA) */}
+        {/* Coluna da Direita: Interface do Construtor de Funil (Ajustada para clareza) */}
         <motion.div 
           initial={{ opacity: 0, x: -40 }} 
           whileInView={{ opacity: 1, x: 0 }} 
@@ -66,7 +66,7 @@ export default function EngineCustomization() {
             {/* Header do Engine (Seletor de Funil) */}
             <div className="flex items-center justify-between border-b-2 border-slate-800 pb-6 mb-6">
               <div>
-                <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Editando Funil</span>
+                <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest block mb-1">Personalizando o Funil</span>
                 <div className="flex items-center gap-2 bg-slate-900 border border-slate-700 px-4 py-2 cursor-pointer group hover:border-indigo-500 transition-colors">
                   <span className="text-sm font-bold text-white uppercase tracking-wide">Lançamento: Jardins</span>
                   <ChevronDown className="w-4 h-4 text-slate-400 group-hover:text-indigo-400" />
@@ -79,7 +79,7 @@ export default function EngineCustomization() {
 
             {/* Corpo do Engine: Editor de Etapas com aspecto "Drag & Drop" */}
             <div className="space-y-4">
-              <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2">Estrutura de Etapas (Drag to reorder)</div>
+              <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2">Organize arrastando</div>
               
               {/* Etapa 1 */}
               <div className="flex items-center gap-3 bg-[#0B0F19] border-2 border-slate-800 p-3 group hover:border-indigo-500/50 transition-colors">
@@ -118,16 +118,16 @@ export default function EngineCustomization() {
               </div>
             </div>
 
-            {/* Editor de Origens Flutuante */}
+            {/* Editor de Origens Flutuante (Linguagem Simplificada) */}
             <motion.div 
               animate={{ y: [0, -8, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -right-8 -bottom-8 bg-slate-50 border-2 border-slate-900 p-5 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] z-20 w-64"
             >
-              <div className="text-[10px] font-[800] text-slate-500 uppercase tracking-widest mb-3 border-b-2 border-slate-200 pb-2">Origens de Lead (UTM)</div>
+              <div className="text-[10px] font-[800] text-slate-500 uppercase tracking-widest mb-3 border-b-2 border-slate-200 pb-2">De onde vem o lead?</div>
               <div className="flex flex-wrap gap-2">
-                <span className="text-[10px] font-black bg-indigo-100 text-indigo-800 px-2 py-1 border border-indigo-200">META ADS</span>
-                <span className="text-[10px] font-black bg-emerald-100 text-emerald-800 px-2 py-1 border border-emerald-200">GOOGLE ORGANIC</span>
-                <span className="text-[10px] font-black bg-rose-100 text-rose-800 px-2 py-1 border border-rose-200">OUTDOOR</span>
+                <span className="text-[10px] font-black bg-indigo-100 text-indigo-800 px-2 py-1 border border-indigo-200">INSTAGRAM</span>
+                <span className="text-[10px] font-black bg-emerald-100 text-emerald-800 px-2 py-1 border border-emerald-200">PESQUISA GOOGLE</span>
+                <span className="text-[10px] font-black bg-rose-100 text-rose-800 px-2 py-1 border border-rose-200">INDICAÇÃO</span>
                 <span className="text-[10px] font-black bg-slate-200 text-slate-800 px-2 py-1 border border-slate-300 cursor-pointer hover:bg-slate-300">+ ADD</span>
               </div>
             </motion.div>
