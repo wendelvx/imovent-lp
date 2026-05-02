@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageCircle, CheckCircle2, Globe, LayoutDashboard, AlertTriangle } from 'lucide-react';
+import { ArrowRight, MessageCircle, CheckCircle2, Globe, LayoutDashboard, Zap } from 'lucide-react';
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -28,40 +28,45 @@ export default function Hero() {
     <section className="relative bg-mesh-light min-h-[95vh] flex items-center pt-32 pb-24 px-6 lg:px-12 border-b border-slate-200 overflow-hidden">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         
-        {/* Coluna da Esquerda: O Choque de Realidade & A Solução de Elite */}
+        {/* Coluna da Esquerda: A Promessa de Alívio e Organização */}
         <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="flex flex-col items-start z-10">
           
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-rose-50 border-2 border-rose-200 rounded-none mb-8 shadow-[2px_2px_0px_0px_rgba(225,29,72,0.2)]">
-            <AlertTriangle className="w-4 h-4 text-rose-600" />
-            <span className="text-[11px] font-[800] text-rose-900 tracking-widest uppercase">Diagnóstico: Lucro Vazando</span>
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 border-2 border-indigo-200 rounded-none mb-8 shadow-[2px_2px_0px_0px_rgba(79,70,229,0.2)]">
+            <Zap className="w-4 h-4 text-indigo-600" />
+            <span className="text-[11px] font-[800] text-indigo-900 tracking-widest uppercase">Para Corretores e Imobiliárias</span>
           </motion.div>
           
           <motion.h1 variants={fadeInUp} className="text-5xl lg:text-[4.5rem] font-extrabold text-slate-950 leading-[1.05] tracking-tighter mb-8">
-            O fim da era do <span className="text-rose-600">amadorismo</span> em vendas.
+            Organize sua operação e <span className="text-indigo-600">pare de perder vendas</span> sem perceber.
           </motion.h1>
           
           <motion.p variants={fadeInUp} className="text-lg lg:text-xl text-slate-600 mb-10 leading-relaxed max-w-xl font-medium">
-            Planilhas e WhatsApp desorganizado destroem seu patrimônio diariamente. Assuma o controle com uma <strong className="text-slate-900 font-bold">infraestrutura AAA</strong>: CRM de alta performance, automação de processos e sua própria vitrine de autoridade.
+            <span className="block mb-3">
+              Seja estruturando suas primeiras vendas ou gerenciando uma equipe: o WhatsApp sozinho não dá conta. Leads se perdem, respostas atrasam e o cliente esfria.
+            </span>
+            <span className="block">
+              Com o Imovent, cada conversa vira um próximo passo claro. Centralize seu <strong>CRM, site próprio e atendimento</strong> e comece a operar uma máquina previsível.
+            </span>
           </motion.p>
           
           <motion.div variants={fadeInUp} className="w-full sm:w-auto flex flex-col items-start gap-5">
             <button className="group flex items-center justify-center gap-3 bg-indigo-950 text-white px-10 py-5 font-black text-lg w-full sm:w-auto btn-magnetic-solid hover:bg-indigo-900 transition-colors">
-              Assumir o Controle da Operação
+              Organizar Minhas Vendas Agora
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mt-2">
               <div className="flex items-center gap-2 text-xs text-slate-700 font-[800] uppercase tracking-wider">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Infraestrutura Unificada
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> CRM Anti-Esquecimento
               </div>
               <div className="flex items-center gap-2 text-xs text-slate-700 font-[800] uppercase tracking-wider">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Domínio de Dados
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Site otimizado (SEO)
               </div>
             </div>
           </motion.div>
         </motion.div>
 
-        {/* Coluna da Direita: A Anatomia do Motor AAA (Zero Glassmorphism) */}
+        {/* Coluna da Direita: A Anatomia do Motor AAA (Ajustado para "Alívio") */}
         <motion.div 
           initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }} 
           className="relative w-full h-[600px] hidden lg:block"
@@ -70,28 +75,28 @@ export default function Hero() {
           <motion.div variants={floatAnimation} animate="animate" className="absolute top-0 right-12 left-0 bottom-24 bg-white border-2 border-slate-900 shadow-solid-premium p-8 flex flex-col gap-6 z-10">
             <div className="flex items-center justify-between border-b-2 border-slate-100 pb-6">
               <div className="flex items-center gap-3 font-black text-slate-950 tracking-tight text-xl">
-                <LayoutDashboard className="w-6 h-6 text-indigo-700" /> Centro de Comando
+                <LayoutDashboard className="w-6 h-6 text-indigo-700" /> Seu Dia de Trabalho
               </div>
-              <div className="px-3 py-1 bg-slate-950 text-white text-[10px] font-black uppercase tracking-widest">
-                Motor Ativo
+              <div className="px-3 py-1 bg-emerald-100 border border-emerald-200 text-emerald-800 text-[10px] font-black uppercase tracking-widest">
+                Tudo Organizado
               </div>
             </div>
             
             <div className="grid grid-cols-2 gap-4">
                <div className="bg-slate-50 p-4 border-2 border-slate-200">
-                  <div className="text-[10px] font-black text-slate-500 uppercase tracking-wider mb-2">Comissão Preservada</div>
+                  <div className="text-[10px] font-black text-slate-500 uppercase tracking-wider mb-2">Comissão Mapeada</div>
                   <div className="text-3xl font-black text-slate-900 tracking-tighter">R$ 14.2K</div>
                </div>
                <div className="bg-slate-50 p-4 border-2 border-slate-200">
-                  <div className="text-[10px] font-black text-slate-500 uppercase tracking-wider mb-2">Eficiência Operacional</div>
-                  <div className="text-3xl font-black text-emerald-600 tracking-tighter">98.5%</div>
+                  <div className="text-[10px] font-black text-slate-500 uppercase tracking-wider mb-2">Taxa de Resposta</div>
+                  <div className="text-3xl font-black text-emerald-600 tracking-tighter">Em dia</div>
                </div>
             </div>
 
-            {/* Representação de um log de sistema (Dossier Base) */}
+            {/* Representação de um log de sistema amigável */}
             <div className="flex-1 bg-slate-950 p-5 flex flex-col gap-3 relative overflow-hidden">
                <div className="flex items-center justify-between mb-2">
-                  <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">System Log / Timeline</div>
+                  <div className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Próximos Passos (Hoje)</div>
                </div>
                <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-emerald-500"></div>
@@ -116,7 +121,7 @@ export default function Hero() {
             <div className="p-4 border-b-2 border-slate-800 flex items-center justify-between bg-[#05080f]">
                <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4 text-emerald-400" />
-                  <span className="text-[10px] text-emerald-400 font-black tracking-widest uppercase">Vitrine.SEO</span>
+                  <span className="text-[10px] text-emerald-400 font-black tracking-widest uppercase">Sua Vitrine</span>
                </div>
                <div className="flex gap-1">
                   <div className="w-2 h-2 bg-slate-700"></div>
@@ -128,7 +133,7 @@ export default function Hero() {
                <div className="w-full h-6 bg-slate-800/50"></div>
                <div className="w-2/3 h-4 bg-slate-800/50"></div>
                <div className="mt-auto py-3 bg-indigo-600 text-[10px] font-black text-center text-white uppercase tracking-widest border border-indigo-500">
-                  Ativo Digital Protegido
+                  Captando Clientes
                </div>
             </div>
           </motion.div>
@@ -143,7 +148,7 @@ export default function Hero() {
             </div>
             <div>
               <div className="text-[10px] font-[800] text-slate-500 uppercase tracking-widest mb-1">WhatsApp Sync</div>
-              <div className="text-sm font-black text-slate-950 tracking-tight">Lead transferido para Governança.</div>
+              <div className="text-sm font-black text-slate-950 tracking-tight">Lead salvo e pronto para contato.</div>
             </div>
           </motion.div>
         </motion.div>
