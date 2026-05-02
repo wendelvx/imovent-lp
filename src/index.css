@@ -3,10 +3,10 @@
 
 @layer base {
   html {
-    /* Plus Jakarta Sans para uma aura de SaaS Enterprise/Fintech */
+    /* Plus Jakarta Sans para uma aura de Infraestrutura/Fintech */
     font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
     scroll-behavior: smooth;
-    /* Otimização cirúrgica de legibilidade (Crucial para conversão) */
+    /* Otimização cirúrgica de legibilidade */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -16,63 +16,87 @@
     @apply bg-slate-50 text-slate-900;
   }
 
-  /* Scrollbar Premium e Discreta */
+  /* Aplicação global do Peso 800 para garantir a Soberania nos Títulos */
+  h1, h2, h3, h4 {
+    @apply font-[800] tracking-tighter;
+  }
+
+  /* Scrollbar Industrial e Sólida (Sem cantos arredondados fofos) */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: transparent;
+    @apply bg-slate-100 border-l border-slate-200;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-slate-300 rounded-full;
+    @apply bg-slate-400 rounded-none;
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-400;
+    @apply bg-slate-700;
   }
 }
 
 @layer utilities {
-  /* Mesh Gradient Clean: Adicionado um toque sutil de Emerald (Dinheiro/Lucro) */
+  /* Mesh Gradient Clean: Fundo claro estrutural */
   .bg-mesh-light {
-    background-color: #f8fafc; /* slate-50 */
+    background-color: #f8fafc;
     background-image: 
-      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.04) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.03) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(79, 70, 229, 0.03) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.05) 0px, transparent 40%),
+      radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.03) 0px, transparent 40%);
   }
 
-  /* Mesh Gradient Dark para seções de contraste extremo (Dor do Cliente) */
+  /* Mesh Gradient Dark: Fundo letal para as seções de Dor do Cliente */
   .bg-mesh-dark {
-    background-color: #020617; /* slate-950 */
+    background-color: #020617; 
     background-image: 
-      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.10) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(225, 29, 72, 0.05) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.12) 0px, transparent 45%),
+      radial-gradient(at 100% 100%, rgba(225, 29, 72, 0.08) 0px, transparent 45%);
   }
 
-  /* Dotted Pattern Refinado */
+  /* Dotted Pattern Refinado e mais espaçado para aspecto de "Engenharia" */
   .bg-dotted-pattern {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 
-  /* Sombra Sólida Premium: Mais nítida, menos esfumaçada, criando sobreposição real */
+  /* 
+    ZERO GLASSMORPHISM 
+    Sombra Sólida Premium: Sem blur. Aspecto 3D de hardware/sistema imutável.
+  */
   .shadow-solid-premium {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+    box-shadow: 4px 4px 0px 0px rgba(15, 23, 42, 0.06); 
+    border: 1px solid rgba(15, 23, 42, 0.1);
   }
 
-  /* NOVO: Física de clique para Botões Principais (Sensação de Painkiller) */
+  /* Sombra Sólida para elementos Dark (Diagnóstico e Governança) */
+  .shadow-solid-dark {
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Física de clique para Botões Principais (Sensação de maquinário) */
   .btn-magnetic-solid {
-    box-shadow: 0 4px 0px 0px rgba(67, 56, 202, 1); /* indigo-700 */
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 0 4px 0px 0px rgba(49, 46, 129, 1); /* indigo-900 */
+    border: 1px solid rgba(49, 46, 129, 1);
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.1s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .btn-magnetic-solid:active {
     transform: translateY(4px);
-    box-shadow: 0 0px 0px 0px rgba(67, 56, 202, 1);
+    box-shadow: 0 0px 0px 0px rgba(49, 46, 129, 1);
   }
 
   /* Texto Gradiente para H1s de altíssimo impacto */
   .text-gradient-premium {
     @apply bg-clip-text text-transparent bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-800;
+  }
+
+  /* Utilitários base para os Bento Grids (Travando a estética Anti-Glassmorphism) */
+  .bento-card {
+    @apply bg-white shadow-solid-premium overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(15,23,42,0.08)];
+  }
+
+  .bento-card-dark {
+    @apply bg-[#0B0F19] shadow-solid-dark overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)];
   }
 }
