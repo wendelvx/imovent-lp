@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  html {
+    /* Plus Jakarta Sans para uma aura de SaaS Enterprise/Fintech */
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    /* Otimização cirúrgica de legibilidade (Crucial para conversão) */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+
+  /* Scrollbar Premium e Discreta */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+}
+
+@layer utilities {
+  /* Mesh Gradient Clean: Adicionado um toque sutil de Emerald (Dinheiro/Lucro) */
+  .bg-mesh-light {
+    background-color: #f8fafc; /* slate-50 */
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.04) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.03) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(79, 70, 229, 0.03) 0px, transparent 50%);
+  }
+
+  /* Mesh Gradient Dark para seções de contraste extremo (Dor do Cliente) */
+  .bg-mesh-dark {
+    background-color: #020617; /* slate-950 */
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.10) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(225, 29, 72, 0.05) 0px, transparent 50%);
+  }
+
+  /* Dotted Pattern Refinado */
+  .bg-dotted-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Sombra Sólida Premium: Mais nítida, menos esfumaçada, criando sobreposição real */
+  .shadow-solid-premium {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+  }
+
+  /* NOVO: Física de clique para Botões Principais (Sensação de Painkiller) */
+  .btn-magnetic-solid {
+    box-shadow: 0 4px 0px 0px rgba(67, 56, 202, 1); /* indigo-700 */
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+  }
+  
+  .btn-magnetic-solid:active {
+    transform: translateY(4px);
+    box-shadow: 0 0px 0px 0px rgba(67, 56, 202, 1);
+  }
+
+  /* Texto Gradiente para H1s de altíssimo impacto */
+  .text-gradient-premium {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-800;
+  }
+}
