@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-// SVGs otimizados mantidos, mas com hover mais suave
+// SVGs otimizados mantidos
 const InstagramIcon = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
@@ -31,7 +32,7 @@ export default function Footer() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 lg:gap-12 mb-20">
           
-          {/* Coluna da Marca: Mais "Aliada" e menos "Militar" */}
+          {/* Coluna da Marca */}
           <div className="lg:col-span-2 flex flex-col items-start">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-10 h-10 bg-indigo-600 border-2 border-indigo-400 rounded-xl flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
@@ -59,9 +60,9 @@ export default function Footer() {
           {/* Coluna de Produto */}
           <div className="flex flex-col gap-5">
             <h4 className="text-white font-black uppercase tracking-widest text-[11px] mb-2 border-l-2 border-indigo-600 pl-3">Ecossistema</h4>
-            <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Motor de Gestão</a>
-            <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Vitrine de Autoridade</a>
-            <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Extensão WhatsApp</a>
+            <a href="/#solucao" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Motor de Gestão</a>
+            <a href="/#funcionalidades" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Vitrine de Autoridade</a>
+            <a href="/#funcionalidades" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Extensão WhatsApp</a>
             <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors flex items-center gap-2 group">
               Studio Criativo <span className="bg-emerald-500/10 text-emerald-400 text-[9px] font-black px-2 py-0.5 border border-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white transition-all">NEW</span>
             </a>
@@ -75,31 +76,34 @@ export default function Footer() {
             <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Status do Servidor</a>
           </div>
 
-          {/* Coluna Legal */}
+          {/* Coluna Legal (Atualizada com React Router) */}
           <div className="flex flex-col gap-5">
             <h4 className="text-white font-black uppercase tracking-widest text-[11px] mb-2 border-l-2 border-indigo-600 pl-3">Privacidade</h4>
-            <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Termos de Uso</a>
-            <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Política de Dados</a>
-            <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">LGPD e Segurança</a>
+            <Link to="/termos" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">
+              Termos de Uso
+            </Link>
+            <Link to="/privacidade" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">
+              Política de Privacidade
+            </Link>
           </div>
 
         </div>
 
-        {/* Bottom Bar: Copyright & Badge de Segurança Reestilizado */}
+        {/* Bottom Bar: Copyright & Badge de Segurança */}
         <div className="pt-10 border-t-2 border-slate-900 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
             <p className="text-slate-500 text-xs font-bold uppercase tracking-widest leading-relaxed">
-              © {currentYear} Imovent Tecnologia Ltda. <br className="md:hidden" />
+              © {currentYear} Paulo Wendel Alves Peixoto. <br className="md:hidden" />
               Desenvolvido para alta performance imobiliária.
             </p>
-            <span className="text-[10px] text-slate-700 font-black mt-2 block tracking-tighter">CNPJ: 00.000.000/0001-00</span>
+            <span className="text-[10px] text-slate-700 font-black mt-2 block tracking-tighter">CPF: 018.747.263-70</span>
           </div>
           
           <div className="flex items-center gap-4 px-5 py-3 bg-[#0B0F19] border-2 border-slate-800 rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.5)]">
             <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.4)]"></div>
             <div className="flex flex-col">
               <span className="text-[10px] font-black text-white uppercase tracking-widest">Servidores Criptografados</span>
-              <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Conformidade LGPD 2026</span>
+              <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Conformidade LGPD {currentYear}</span>
             </div>
           </div>
         </div>

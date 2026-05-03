@@ -32,7 +32,6 @@ export default function NavBar() {
           </div>
           <div className="flex flex-col">
             <span className="text-xl font-black text-slate-950 tracking-tighter leading-none">Imovent</span>
-            <span className="text-[9px] font-bold text-indigo-600 uppercase tracking-[0.2em] mt-1">Elite Edition</span>
           </div>
         </div>
 
