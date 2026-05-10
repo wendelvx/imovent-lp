@@ -120,10 +120,14 @@ export default function FaqCTA() {
             </p>
 
             <div className="flex flex-col items-center gap-8">
+              <a
+              href="https://app.imovent.com.br/register"
+>
               <button className="bg-indigo-600 text-white border-2 border-indigo-400 px-10 py-6 font-black text-lg uppercase tracking-widest shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] hover:bg-indigo-500 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all flex items-center gap-4 group w-full sm:w-auto justify-center">
                 Criar Minha Conta Grátis
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </button>
+              </a>
               
               <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 text-[11px] font-black text-slate-500 uppercase tracking-widest bg-slate-900/50 px-6 py-3 border border-slate-800 rounded-xl">
                 <div className="flex items-center gap-2">

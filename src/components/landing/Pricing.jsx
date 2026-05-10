@@ -15,7 +15,7 @@ const staggerContainer = {
 export default function Pricing() {
   return (
     <section className="bg-slate-50 py-32 px-6 lg:px-12 border-y-2 border-slate-900 relative">
-      
+
       <div className="max-w-4xl mx-auto text-center mb-20 md:mb-24">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 border-2 border-indigo-200 shadow-[2px_2px_0px_0px_rgba(79,70,229,0.2)] mb-6">
@@ -32,7 +32,7 @@ export default function Pricing() {
       </div>
 
       <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="max-w-5xl mx-auto grid md:grid-cols-2 gap-y-12 md:gap-y-0 md:gap-x-12 items-stretch">
-        
+
         {/* Card Solo - O Corretor Independente */}
         <motion.div variants={fadeInUp} className="bg-white border-2 border-slate-900 p-8 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] flex flex-col h-full group hover:-translate-y-1 transition-transform rounded-2xl">
           <div className="mb-6 border-b-2 border-slate-100 pb-6">
@@ -41,7 +41,7 @@ export default function Pricing() {
               Sua Vitrine Digital
             </p>
           </div>
-          
+
           <div className="mb-2 flex items-baseline gap-1">
             <span className="text-5xl font-black text-slate-950 tracking-tighter">R$ 97</span>
             <span className="text-sm text-slate-500 font-black uppercase tracking-widest">/mês</span>
@@ -60,7 +60,7 @@ export default function Pricing() {
               { text: 'Acesso ao Gerador de Artes e Automações' },
             ].map((feature, idx) => (
               <li key={idx} className="flex items-start gap-3 text-sm text-slate-900 font-bold">
-                <CheckSquare className="w-5 h-5 text-indigo-600 flex-shrink-0" /> 
+                <CheckSquare className="w-5 h-5 text-indigo-600 flex-shrink-0" />
                 <span className="mt-0.5">{feature.text}</span>
               </li>
             ))}
@@ -82,16 +82,19 @@ export default function Pricing() {
                 <span>+15 Fotos por Imóvel</span> <span className="text-slate-950 font-black">R$ 19,90</span>
               </div>
             </div>
+            <a
+              href="https://app.imovent.com.br/register"
 
-            <button className="w-full py-5 bg-white border-2 border-slate-900 text-slate-900 font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors duration-300 text-sm shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] active:shadow-none active:translate-y-1 rounded-xl">
-              Começar Agora
-            </button>
+            >
+              <button className="w-full py-5 bg-white border-2 border-slate-900 text-slate-900 font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors duration-300 text-sm shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] active:shadow-none active:translate-y-1 rounded-xl">
+                Começar Agora
+              </button></a>
           </div>
         </motion.div>
 
         {/* Card Team - O QG da Imobiliária */}
         <motion.div variants={fadeInUp} className="bg-slate-950 border-2 border-indigo-500 p-8 shadow-[6px_6px_0px_0px_rgba(79,70,229,1)] flex flex-col h-full relative z-10 transform md:-translate-y-4 rounded-2xl">
-          
+
           <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-[10px] font-black uppercase tracking-widest py-1.5 px-4 border-2 border-indigo-400 shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] flex items-center gap-2 whitespace-nowrap rounded-full">
             <Zap className="w-3 h-3 fill-amber-400 text-amber-400" />
             Mais Escolhido por Imobiliárias
@@ -103,7 +106,7 @@ export default function Pricing() {
               Gestão e Atendimento em Equipe
             </p>
           </div>
-          
+
           <div className="mb-2 flex items-baseline gap-1">
             <span className="text-5xl font-black text-white tracking-tighter">R$ 257</span>
             <span className="text-sm text-slate-400 font-black uppercase tracking-widest">/mês</span>
@@ -122,7 +125,7 @@ export default function Pricing() {
               { text: 'Até 50 Fotos por Imóvel' },
             ].map((feature, idx) => (
               <li key={idx} className="flex items-start gap-3 text-sm text-slate-300 font-bold">
-                <CheckSquare className="w-5 h-5 text-indigo-400 flex-shrink-0" /> 
+                <CheckSquare className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                 <span className="mt-0.5">{feature.text}</span>
               </li>
             ))}
@@ -144,10 +147,13 @@ export default function Pricing() {
                 <span>+15 Fotos por Imóvel</span> <span className="text-white font-black">R$ 19,90</span>
               </div>
             </div>
+            <a
+              href="https://app.imovent.com.br/register"
 
-            <button className="w-full py-5 bg-indigo-600 text-white font-black uppercase tracking-widest border-2 border-indigo-400 hover:bg-indigo-700 transition-colors btn-magnetic-solid text-sm rounded-xl">
-              Ativar Minha Equipe
-            </button>
+            >
+              <button className="w-full py-5 bg-indigo-600 text-white font-black uppercase tracking-widest border-2 border-indigo-400 hover:bg-indigo-700 transition-colors btn-magnetic-solid text-sm rounded-xl">
+                Ativar Minha Equipe
+              </button></a>
           </div>
         </motion.div>
 

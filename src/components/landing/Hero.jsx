@@ -56,10 +56,14 @@ export default function Hero() {
           </motion.p>
           
           <motion.div variants={fadeInUp} className="w-full sm:w-auto flex flex-col items-start gap-5">
-            <button className="group flex items-center justify-center gap-3 bg-indigo-950 text-white px-10 py-5 font-black text-lg w-full sm:w-auto shadow-xl shadow-indigo-900/20 hover:bg-indigo-900 hover:-translate-y-0.5 transition-all rounded-xl">
+           <a 
+            href="https://app.imovent.com.br/register"
+           
+          >
+           <button className="group flex items-center justify-center gap-3 bg-indigo-950 text-white px-10 py-5 font-black text-lg w-full sm:w-auto shadow-xl shadow-indigo-900/20 hover:bg-indigo-900 hover:-translate-y-0.5 transition-all rounded-xl">
               Organizar Minhas Vendas Agora
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </button></a>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mt-2">
               <div className="flex items-center gap-2 text-xs text-slate-700 font-[800] uppercase tracking-wider">
