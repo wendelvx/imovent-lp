@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react'; // <-- Import corrigido aqui
 
 // SVGs otimizados mantidos
 const InstagramIcon = ({ className }) => (
@@ -22,6 +23,35 @@ const MailIcon = ({ className }) => (
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Função para rolagem suave ao clicar nos links do Ecossistema
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    
+    // Se não estiver na Home, redireciona para a Home com o hash
+    if (location.pathname !== '/') {
+      navigate(`/${sectionId}`);
+      return;
+    }
+
+    // Se já estiver na Home, faz a rolagem suave
+    const element = document.querySelector(sectionId);
+    if (element) {
+      const headerOffset = 100; // Espaço do menu fixo no topo
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Atualiza a URL sem pular
+      window.history.pushState(null, '', sectionId);
+    }
+  };
 
   return (
     <footer className="bg-slate-950 pt-24 pb-12 px-6 lg:px-12 border-t-2 border-slate-900 relative">
@@ -34,7 +64,7 @@ export default function Footer() {
           
           {/* Coluna da Marca */}
           <div className="lg:col-span-2 flex flex-col items-start">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-8 cursor-pointer" onClick={(e) => scrollToSection(e, '#topo')}>
               <div className="w-10 h-10 bg-indigo-600 border-2 border-indigo-400 rounded-xl flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                 <span className="text-white font-black text-xl italic">I</span>
               </div>
@@ -60,10 +90,10 @@ export default function Footer() {
           {/* Coluna de Produto */}
           <div className="flex flex-col gap-5">
             <h4 className="text-white font-black uppercase tracking-widest text-[11px] mb-2 border-l-2 border-indigo-600 pl-3">Ecossistema</h4>
-            <a href="/#solucao" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Motor de Gestão</a>
-            <a href="/#funcionalidades" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Vitrine de Autoridade</a>
-            <a href="/#funcionalidades" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Extensão WhatsApp</a>
-            <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors flex items-center gap-2 group">
+            {/* Lembre-se de adicionar ids correspondentes (ex: id="crm-engine") nas divs da seção Features */}
+            <a href="#crm-engine" onClick={(e) => scrollToSection(e, '#crm-engine')} className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Motor de Gestão</a>
+            <a href="#vitrine-digital" onClick={(e) => scrollToSection(e, '#vitrine-digital')} className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Vitrine de Autoridade</a>
+            <a href="#automacoes" onClick={(e) => scrollToSection(e, '#automacoes')} className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors flex items-center gap-2 group">
               Studio Criativo <span className="bg-emerald-500/10 text-emerald-400 text-[9px] font-black px-2 py-0.5 border border-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white transition-all">NEW</span>
             </a>
           </div>
@@ -72,11 +102,16 @@ export default function Footer() {
           <div className="flex flex-col gap-5">
             <h4 className="text-white font-black uppercase tracking-widest text-[11px] mb-2 border-l-2 border-indigo-600 pl-3">Apoio</h4>
             <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Central de Ajuda</a>
-            <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors font-black text-indigo-400">Falar com Especialista</a>
-            <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">Status do Servidor</a>
+            {/* Botão de destaque para Venda Consultiva */}
+            <a href="https://wa.me/seunumerodevendas" target="_blank" rel="noopener noreferrer" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors font-black text-indigo-400 flex items-center gap-2">
+              Falar com Especialista <ArrowRight className="w-3 h-3" />
+            </a>
+            <a href="#" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500"></span> Status do Sistema
+            </a>
           </div>
 
-          {/* Coluna Legal (Atualizada com React Router) */}
+          {/* Coluna Legal */}
           <div className="flex flex-col gap-5">
             <h4 className="text-white font-black uppercase tracking-widest text-[11px] mb-2 border-l-2 border-indigo-600 pl-3">Privacidade</h4>
             <Link to="/termos" className="text-slate-400 font-bold text-sm hover:text-indigo-400 transition-colors">
@@ -96,10 +131,10 @@ export default function Footer() {
               © {currentYear} Paulo Wendel Alves Peixoto. <br className="md:hidden" />
               Desenvolvido para alta performance imobiliária.
             </p>
-            <span className="text-[10px] text-slate-700 font-black mt-2 block tracking-tighter">CPF: 018.747.263-70</span>
+            <span className="text-[10px] text-slate-700 font-black mt-2 block tracking-tighter">CNPJ / CPF Protegido</span>
           </div>
           
-          <div className="flex items-center gap-4 px-5 py-3 bg-[#0B0F19] border-2 border-slate-800 rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.5)]">
+          <div className="flex items-center gap-4 px-5 py-3 bg-[#0B0F19] border-2 border-slate-800 rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,0.5)] cursor-default">
             <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.4)]"></div>
             <div className="flex flex-col">
               <span className="text-[10px] font-black text-white uppercase tracking-widest">Servidores Criptografados</span>

@@ -53,10 +53,11 @@ export default function Pricing() {
           <ul className="space-y-4 mb-8 flex-1">
             {[
               { text: 'Seu Site Imobiliário (Pronto para o Google)' },
-              { text: 'Gestão de Clientes Organizada' },
+              { text: 'Sincronização Integrada com WhatsApp' },
+              { text: '1 Conta de Acesso (Exclusivo Corretor)' },
               { text: 'Até 100 Imóveis no Portfólio' },
-              { text: 'Sincronização com WhatsApp' },
-              { text: 'Acesso ao Gerador de Artes' },
+              { text: 'Até 50 Fotos por Imóvel' },
+              { text: 'Acesso ao Gerador de Artes e Automações' },
             ].map((feature, idx) => (
               <li key={idx} className="flex items-start gap-3 text-sm text-slate-900 font-bold">
                 <CheckSquare className="w-5 h-5 text-indigo-600 flex-shrink-0" /> 
@@ -78,7 +79,7 @@ export default function Pricing() {
                 <span>+50 Vagas de Imóveis</span> <span className="text-slate-950 font-black">R$ 39,90</span>
               </div>
               <div className="flex justify-between items-center text-xs font-bold text-slate-700 pt-1">
-                <span>+50 Espaços para Fotos</span> <span className="text-slate-950 font-black">R$ 19,90</span>
+                <span>+15 Fotos por Imóvel</span> <span className="text-slate-950 font-black">R$ 19,90</span>
               </div>
             </div>
 
@@ -118,6 +119,7 @@ export default function Pricing() {
               { text: 'Repasse Automático de Leads' },
               { text: 'Incluso 5 Usuários para seu time' },
               { text: 'Até 500 Imóveis no Portfólio' },
+              { text: 'Até 50 Fotos por Imóvel' },
             ].map((feature, idx) => (
               <li key={idx} className="flex items-start gap-3 text-sm text-slate-300 font-bold">
                 <CheckSquare className="w-5 h-5 text-indigo-400 flex-shrink-0" /> 
@@ -139,7 +141,7 @@ export default function Pricing() {
                 <span>+100 Vagas de Imóveis</span> <span className="text-white font-black">R$ 39,90</span>
               </div>
               <div className="flex justify-between items-center text-xs font-bold text-slate-400 pt-1">
-                <span>+100 Espaços para Fotos</span> <span className="text-white font-black">R$ 19,90</span>
+                <span>+15 Fotos por Imóvel</span> <span className="text-white font-black">R$ 19,90</span>
               </div>
             </div>
 
