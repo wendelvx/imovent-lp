@@ -44,7 +44,7 @@ export default function LeadDossier() {
           </motion.h2>
 
           <motion.p variants={fadeInUp} className="text-lg text-slate-600 mb-10 font-medium leading-relaxed max-w-xl">
-            Esqueça a preocupação de perder contatos se um celular quebrar ou um membro da equipe sair. O Dossiê do Imovent funciona como um arquivo inteligente, guardando cada interação em uma linha do tempo impecável.
+            Esqueça a preocupação de perder contatos se um celular quebrar ou um membro da equipe sair. Nosso Dossiê funciona como um arquivo inteligente, guardando cada interação em uma linha do tempo impecável.
           </motion.p>
 
           <motion.ul variants={staggerContainer} className="space-y-4 w-full">

@@ -42,18 +42,21 @@ export default function Hero() {
             <span className="text-[11px] font-[800] text-indigo-900 tracking-widest uppercase">Para Corretores e Imobiliárias</span>
           </motion.div>
           
-          <motion.h1 variants={fadeInUp} className="text-5xl lg:text-[4.5rem] font-extrabold text-slate-950 leading-[1.05] tracking-tighter mb-8">
-            Organize sua operação e <span className="text-indigo-600">pare de perder vendas</span> sem perceber.
-          </motion.h1>
+          <motion.h1 
+  variants={fadeInUp} 
+  className="text-5xl lg:text-[4.2rem] font-extrabold text-slate-950 leading-[1.05] tracking-tighter mb-8"
+>
+  O cliente chamou. Sua operação está <span className="text-indigo-600">preparada para não perder</span> essa venda?
+</motion.h1>
           
           <motion.p variants={fadeInUp} className="text-lg lg:text-xl text-slate-600 mb-10 leading-relaxed max-w-xl font-medium">
-            <span className="block mb-3">
-              Seja estruturando suas primeiras vendas ou gerenciando uma equipe: o WhatsApp sozinho não dá conta. Leads se perdem, respostas atrasam e o cliente esfria.
-            </span>
-            <span className="block">
-              Com o Imovent, cada conversa vira um próximo passo claro. Centralize seu <strong>CRM, site próprio e atendimento</strong> e comece a operar uma máquina previsível.
-            </span>
-          </motion.p>
+  <span className="block mb-3">
+    Se você depende apenas do WhatsApp, o risco de perder o <i>timing</i> é real. No volume do dia a dia, leads se perdem, respostas atrasam e o cliente esfria no vácuo das conversas.
+  </span>
+  <span className="block">
+    O Imovent é a infraestrutura que garante um <strong>próximo passo claro</strong> para cada contato. Centralize seu CRM, site e atendimento e opere uma máquina previsível.
+  </span>
+</motion.p>
           
           <motion.div variants={fadeInUp} className="w-full sm:w-auto flex flex-col items-start gap-5">
            <a 

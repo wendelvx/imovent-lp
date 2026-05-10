@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MessageCircle, Zap, Wand2, ArrowRight, CheckSquare, Globe, Search, LayoutDashboard, Database, Image as ImageIcon, User, Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MessageCircle, Zap, Wand2, ArrowRight,Plus, CheckSquare, Globe, Search, LayoutDashboard, Database, Image as ImageIcon, User, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -47,68 +47,108 @@ export default function Features() {
       <div className="max-w-6xl mx-auto flex flex-col gap-32 lg:gap-40">
         
         {/* Feature 1: CRM & WhatsApp Engine */}
-        <motion.div id="crm-engine" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-          <motion.div variants={fadeInUp} className="order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-indigo-50 border-2 border-indigo-200 shadow-[2px_2px_0px_0px_rgba(79,70,229,0.2)] mb-6">
-              <LayoutDashboard className="w-4 h-4 text-indigo-700" />
-              <span className="text-[10px] font-black text-indigo-900 tracking-widest uppercase">Gestão Simplificada</span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-950 mb-6 tracking-tighter leading-[1.1]">
-              Pare de perder vendas no meio das conversas do WhatsApp.
-            </h2>
-            <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
-              Usar só o WhatsApp é pedir para esquecer de responder alguém. O Imovent transforma suas conversas em um funil organizado. Salve o contato, anotações e agende o próximo passo sem nunca sair da tela do chat.
-            </p>
-            <ul className="space-y-4">
-              {['Histórico salvo para sempre (mesmo se perder o celular).', 'Lembretes automáticos para não esquecer de ninguém.', 'Mova o cliente de etapa com um clique.'].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-slate-900 font-bold text-sm tracking-wide">
-                  <CheckSquare className="w-5 h-5 text-indigo-600 flex-shrink-0" /> {item}
-                </li>
+        {/* Feature 1: CRM & WhatsApp Engine (Extensão com Foco em Gestão) */}
+<motion.div id="crm-engine" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+  <motion.div variants={fadeInUp} className="order-2 lg:order-1">
+    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border-2 border-emerald-200 shadow-[2px_2px_0px_0px_rgba(16,185,129,0.2)] mb-6">
+      <MessageCircle className="w-4 h-4 text-emerald-700" />
+      <span className="text-[10px] font-black text-emerald-900 tracking-widest uppercase">Operação em Tempo Real</span>
+    </div>
+    <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-950 mb-6 tracking-tighter leading-[1.1]">
+      Pare de perder vendas no meio das conversas do <span className="text-emerald-600">WhatsApp.</span>
+    </h2>
+    <p className="text-lg text-slate-600 leading-relaxed font-medium mb-8">
+      Usar só o WhatsApp é pedir para esquecer de responder alguém. Nossa <strong>Extensão Exclusiva</strong> transforma seu navegador em um centro de comando. Salve contatos e gerencie seu funil de vendas sem nunca sair da tela do chat.
+    </p>
+    <ul className="space-y-4">
+      {[
+        <><strong>Captura Instantânea:</strong> Extraia dados do lead direto para o Imovent com um clique.</>,
+        <><strong>Funil no Chat:</strong> Mova o cliente de etapa sem precisar alternar abas ou sistemas.</>,
+        <><strong>Histórico Blindado:</strong> Tudo o que é anotado no chat vai direto para o dossiê do cliente.</>
+      ].map((item, i) => (
+        <li key={i} className="flex items-start gap-3 text-slate-900 font-bold text-sm tracking-wide">
+          <CheckSquare className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" /> 
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </motion.div>
+  
+  <motion.div variants={fadeInUp} className="order-1 lg:order-2 bg-slate-50 border-2 border-slate-900 p-8 shadow-solid-premium relative">
+    <motion.div variants={abstractUIStagger} className="w-full max-w-sm mx-auto bg-white border-2 border-slate-900 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] relative z-10 overflow-hidden">
+      
+      {/* Chrome Fake Header */}
+      <div className="bg-slate-100 border-b-2 border-slate-900 px-3 py-2 flex items-center gap-3">
+        <div className="flex gap-1.5">
+          <div className="w-2.5 h-2.5 rounded-full bg-rose-400 border border-slate-900"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-amber-400 border border-slate-900"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 border border-slate-900"></div>
+        </div>
+        <div className="bg-white border border-slate-300 text-[9px] px-3 py-1 rounded flex-1 font-mono text-slate-400 flex items-center gap-2">
+          <Globe className="w-3 h-3 opacity-50" /> web.whatsapp.com
+        </div>
+      </div>
+
+      <div className="p-0 flex flex-col">
+        {/* Simulação da Lista de Conversas (Lateral Esquerda Falsa) */}
+        <div className="flex">
+           <div className="w-16 border-r-2 border-slate-100 bg-slate-50 p-2 space-y-3 hidden sm:block">
+              {[...Array(4)].map((_, i) => (
+                <div key={i} className={`h-10 w-10 rounded-full border-2 border-slate-200 bg-white ${i === 0 ? 'border-emerald-500' : ''}`}></div>
               ))}
-            </ul>
-          </motion.div>
-          
-          <motion.div variants={fadeInUp} className="order-1 lg:order-2 bg-slate-50 border-2 border-slate-900 p-8 shadow-solid-premium relative">
-            <motion.div variants={abstractUIStagger} className="w-full max-w-sm mx-auto bg-white border-2 border-slate-900 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] p-6 relative z-10">
-              
-              {/* Contato do WhatsApp */}
+           </div>
+           
+           <div className="flex-1 p-6 bg-white">
+              {/* Header do Contato Ativo */}
               <div className="flex items-center gap-4 border-b-2 border-slate-100 pb-4 mb-6">
-                <div className="w-12 h-12 bg-emerald-500 border-2 border-slate-900 flex items-center justify-center relative shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]">
+                <div className="w-12 h-12 bg-emerald-500 border-2 border-slate-900 flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]">
                   <User className="text-white w-6 h-6"/>
-                  <div className="absolute -bottom-1.5 -right-1.5 w-4 h-4 bg-emerald-300 border-2 border-slate-900 flex items-center justify-center rounded-full">
-                     <MessageCircle className="w-2.5 h-2.5 text-slate-900 fill-slate-900" />
-                  </div>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-sm font-black text-slate-900 tracking-tight leading-tight mb-0.5">Ricardo Almeida</h4>
-                  <p className="text-[10px] font-bold text-slate-500 font-mono tracking-widest">+55 11 99999-9999</p>
+                  <h4 className="text-sm font-black text-slate-900 leading-tight">Ricardo Almeida</h4>
+                  <p className="text-[9px] font-bold text-emerald-500 uppercase tracking-widest italic">Digitando...</p>
                 </div>
               </div>
               
-              <div className="space-y-4 relative">
-                {/* Simulação de mensagem */}
-                <motion.div variants={popIn} className="w-full bg-slate-50 border-2 border-slate-200 p-4 relative rounded-r-2xl rounded-bl-2xl">
-                   <p className="text-[11px] text-slate-700 font-bold mb-3 leading-relaxed">"Gostei muito daquela casa com 3 suítes, podemos agendar uma visita para sábado à tarde?"</p>
-                   <span className="text-[9px] font-black text-slate-400 absolute bottom-2 right-3">14:30</span>
+              <div className="space-y-4">
+                {/* Balão de Mensagem */}
+                <motion.div variants={popIn} className="w-[90%] bg-slate-50 border-2 border-slate-200 p-3 relative rounded-r-xl rounded-bl-xl">
+                   <p className="text-[10px] text-slate-700 font-bold leading-relaxed">"Gostei muito daquela casa com 3 suítes no Aeroporto. Como fazemos?"</p>
                 </motion.div>
 
-                {/* Botão Brutalista de Salvar */}
-                <motion.div variants={popIn} className="h-14 w-full bg-indigo-600 border-2 border-indigo-900 shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] relative flex items-center justify-center cursor-pointer hover:bg-indigo-700 transition-colors mt-6">
-                   <Zap className="w-4 h-4 text-indigo-200 mr-2" />
-                   <span className="text-white font-black text-[10px] uppercase tracking-widest">Extrair para o Imovent</span>
-                </motion.div>
-                
-                {/* Etiqueta Flutuante */}
-                <motion.div variants={popIn} className="absolute -right-8 -bottom-10 bg-white border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] p-3 w-48 rotate-3 z-20">
-                   <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest block mb-2">Lead Organizado</span>
-                   <div className="h-2 w-full bg-indigo-500"></div>
+                {/* INTERFACE DA EXTENSÃO (O "Coração" do gerenciamento) */}
+                <motion.div variants={popIn} className="w-full bg-white border-2 border-indigo-600 shadow-[4px_4px_0px_0px_rgba(79,70,229,1)] mt-2 overflow-hidden">
+                   <div className="bg-indigo-600 px-3 py-1.5 flex justify-between items-center">
+                      <span className="text-[8px] font-black text-white uppercase tracking-tighter">Imovent: Gestão de Lead</span>
+                      <Zap className="w-3 h-3 text-amber-400 fill-amber-400" />
+                   </div>
+                   <div className="p-3 space-y-2.5">
+                      <div className="flex flex-col gap-1">
+                         <label className="text-[7px] font-black text-slate-400 uppercase">Status no Funil</label>
+                         <div className="h-7 w-full bg-indigo-50 border border-indigo-100 flex items-center px-2 text-[9px] font-black text-indigo-700 italic">
+                            Visita Marcada
+                         </div>
+                      </div>
+                      <button className="h-9 w-full bg-slate-900 text-white flex items-center justify-center gap-2 hover:bg-slate-800 transition-all">
+                         <Plus className="w-3 h-3 text-emerald-400" />
+                         <span className="text-[9px] font-black uppercase tracking-widest">Salvar no CRM</span>
+                      </button>
+                   </div>
                 </motion.div>
               </div>
+           </div>
+        </div>
+      </div>
+    </motion.div>
 
-            </motion.div>
-            <div className="absolute inset-0 bg-dotted-pattern opacity-50"></div>
-          </motion.div>
-        </motion.div>
+    {/* Selo Flutuante de Autoridade */}
+    <motion.div variants={popIn} className="absolute -right-4 -bottom-4 bg-amber-400 border-2 border-slate-900 p-3 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] rotate-3 z-20 hidden md:block">
+       <span className="text-[9px] font-black text-slate-950 uppercase tracking-widest block text-center">Gestão Sem<br/>Trocar de Aba</span>
+    </motion.div>
+
+    <div className="absolute inset-0 bg-dotted-pattern opacity-30 pointer-events-none"></div>
+  </motion.div>
+</motion.div>
 
         {/* Feature 2: Vitrine Digital (Slider com Ajuste Automático de Altura) */}
         <motion.div id="vitrine-digital" initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center lg:flex-row-reverse">

@@ -52,14 +52,14 @@ export default function Pricing() {
 
           <ul className="space-y-4 mb-8 flex-1">
             {[
-              { text: 'Seu Site Imobiliário (Pronto para o Google)' },
-              { text: 'Sincronização Integrada com WhatsApp' },
+              { text: 'Site Imobiliário (SEO Otimizado)' },
+              { text: <><strong>Extensão Marketplace</strong> (Postagem 1 clique)</> },
+              { text: <><strong>Extensão Exclusiva</strong> para WhatsApp Web</> },
               { text: '1 Conta de Acesso (Exclusivo Corretor)' },
               { text: 'Até 100 Imóveis no Portfólio' },
-              { text: 'Até 50 Fotos por Imóvel' },
               { text: 'Acesso ao Gerador de Artes e Automações' },
             ].map((feature, idx) => (
-              <li key={idx} className="flex items-start gap-3 text-sm text-slate-900 font-bold">
+              <li key={idx} className="flex items-start gap-3 text-sm text-slate-900 font-medium">
                 <CheckSquare className="w-5 h-5 text-indigo-600 flex-shrink-0" />
                 <span className="mt-0.5">{feature.text}</span>
               </li>
@@ -67,7 +67,6 @@ export default function Pricing() {
           </ul>
 
           <div className="mt-auto">
-            {/* Bloco de Add-ons Escalonáveis (Linguagem Amigável) */}
             <div className="p-5 bg-slate-50 border-2 border-slate-200 mb-6 flex flex-col gap-2 rounded-xl">
               <span className="uppercase tracking-widest text-[10px] text-indigo-700 mb-1 font-black flex items-center gap-2">
                 <Plus className="w-3 h-3" /> Precisa de mais? (Opcionais)
@@ -78,17 +77,12 @@ export default function Pricing() {
               <div className="flex justify-between items-center text-xs font-bold text-slate-700 border-b border-slate-200 pb-2">
                 <span>+50 Vagas de Imóveis</span> <span className="text-slate-950 font-black">R$ 39,90</span>
               </div>
-              <div className="flex justify-between items-center text-xs font-bold text-slate-700 pt-1">
-                <span>+15 Fotos por Imóvel</span> <span className="text-slate-950 font-black">R$ 19,90</span>
-              </div>
             </div>
-            <a
-              href="https://app.imovent.com.br/register"
-
-            >
+            <a href="https://app.imovent.com.br/register">
               <button className="w-full py-5 bg-white border-2 border-slate-900 text-slate-900 font-black uppercase tracking-widest hover:bg-slate-900 hover:text-white transition-colors duration-300 text-sm shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] active:shadow-none active:translate-y-1 rounded-xl">
                 Começar Agora
-              </button></a>
+              </button>
+            </a>
           </div>
         </motion.div>
 
@@ -117,14 +111,15 @@ export default function Pricing() {
 
           <ul className="space-y-4 mb-8 flex-1">
             {[
-              { text: 'Site Master (Para toda a sua Equipe)' },
+              { text: 'Site com SEO Otimizado' },
+              { text: <><strong>Extensão Marketplace</strong> (Postagem 1 clique)</> },
+              { text: <><strong>Extensão WhatsApp Web</strong> para a equipe</> },
               { text: 'Controle de quem acessa seus dados' },
               { text: 'Repasse Automático de Leads' },
               { text: 'Incluso 5 Usuários para seu time' },
               { text: 'Até 500 Imóveis no Portfólio' },
-              { text: 'Até 50 Fotos por Imóvel' },
             ].map((feature, idx) => (
-              <li key={idx} className="flex items-start gap-3 text-sm text-slate-300 font-bold">
+              <li key={idx} className="flex items-start gap-3 text-sm text-slate-300 font-medium">
                 <CheckSquare className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                 <span className="mt-0.5">{feature.text}</span>
               </li>
@@ -132,7 +127,6 @@ export default function Pricing() {
           </ul>
 
           <div className="mt-auto">
-            {/* Bloco de Add-ons Escalonáveis (Dark Mode) */}
             <div className="p-5 bg-[#0B0F19] border-2 border-slate-800 mb-6 flex flex-col gap-2 rounded-xl">
               <span className="uppercase tracking-widest text-[10px] text-indigo-400 mb-1 font-black flex items-center gap-2">
                 <Plus className="w-3 h-3" /> Precisa de escala? (Opcionais)
@@ -143,17 +137,12 @@ export default function Pricing() {
               <div className="flex justify-between items-center text-xs font-bold text-slate-400 border-b border-slate-800 pb-2">
                 <span>+100 Vagas de Imóveis</span> <span className="text-white font-black">R$ 39,90</span>
               </div>
-              <div className="flex justify-between items-center text-xs font-bold text-slate-400 pt-1">
-                <span>+15 Fotos por Imóvel</span> <span className="text-white font-black">R$ 19,90</span>
-              </div>
             </div>
-            <a
-              href="https://app.imovent.com.br/register"
-
-            >
+            <a href="https://app.imovent.com.br/register">
               <button className="w-full py-5 bg-indigo-600 text-white font-black uppercase tracking-widest border-2 border-indigo-400 hover:bg-indigo-700 transition-colors btn-magnetic-solid text-sm rounded-xl">
                 Ativar Minha Equipe
-              </button></a>
+              </button>
+            </a>
           </div>
         </motion.div>
 
